@@ -23,24 +23,29 @@
 //  }
 //}
 //include([10, 30, 30, 10], 10);
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //Сложность алгоритма: 3 из 10
 //Временная сложность: O(n)
 //Что делает этот алгоритм: Подсчет вхождений элемента в массив
-function countOccurrences(inp, output) {
-  let count = 0;
-  for (let i = 0; i < inp.length; i++) {
-    if (inp[i] === output) {
-      count++;
-    }
-  }
-  console.log(count);
-}
-
-countOccurrences([10, 3, 40, 10, 10, 3], 3);
+//function countOccurrences(inp, output) {
+//  let count = 0;
+//  for (let i = 0; i < inp.length; i++) {
+//    if (inp[i] === output) {
+//      count++;
+//    }
+//  }
+//  console.log(count);
+//}
+//
+//countOccurrences([10, 3, 40, 10, 10, 3], 3);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* 
+
+//Сложность алгоритма: 6 из 10
+//Временная сложность: O(n²)
+//Что делает этот алгоритм: Поиск уникальных элементов в массиве
 function uniqueElements(inp, out) {
   let count = 0;
   let arr = [];
@@ -63,7 +68,7 @@ function uniqueElements(inp, out) {
   console.log(arr);
 }
 uniqueElements([4, 1, 3, 2, 2, 5, 1]);
-  */
+ 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* function uniqueNums(inp, target) {
   for (let i = 0; i < inp.length; i++) {
