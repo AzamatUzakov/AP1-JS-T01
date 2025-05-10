@@ -203,26 +203,30 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
 //Сложность алгоритма: **7 из 10**
 //Временная сложность: **O(n²)**
 //Что делает этот алгоритм: **Поиск дубликатов в массиве**
+//function findDuplicates(inp) {
+//  let arr = [];
+//  let count = 0;
+//  for (let i = 0; i < inp.length; i++) {
+//    for (let g = i + 1; g < inp.length; g++) {
+//      if (inp[i] === inp[g]) {
+//        count++;
+//        if (!arr.includes(inp[i])) {
+//                  arr.push(inp[i]);
+//
+//        }
+//      }
+//
+//    }
+//  }
+//  console.log(arr);
+//}
+//findDuplicates([1, 2, 3, 2, 3, 3, 4, 5, 5]); // => 2, 5
+//findDuplicates([10, 20, 10, 30, 40, 30, 50]); // => 10, 30
+//findDuplicates([1, 2, 3, 4]); // => ничего не выводит
 
-function findDuplicates(inp) {
-  let arr = [];
-  let count = 0;
-  for (let i = 0; i < inp.length; i++) {
-    for (let g = i + 1; g < inp.length; g++) {
-      if (inp[i] === inp[g]) {
-        count++;
-        if (!arr.includes(inp[i])) {
-          arr.push(inp[i]);
-        }
-      }
-    }
-  }
-  console.log(arr);
-}
-findDuplicates([1, 2, 3, 2, 3, 3, 4, 5, 5]); // => 2, 5
-findDuplicates([10, 20, 10, 30, 40, 30, 50]); // => 10, 30
-findDuplicates([1, 2, 3, 4]); // => ничего не выводит
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
