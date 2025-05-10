@@ -91,28 +91,31 @@
 //Сложность алгоритма: **7 из 10**
 //Временная сложность: **O(n²)**
 //Что делает этот алгоритм: **Создание массива, где каждый элемент — произведение всех элементов исходного массива, кроме текущего**
-function arr(inp) {
-  const newArr = [];
-  for (let i = 0; i < inp.length; i++) {
-    console.log(i, "I");
-    let product = 1;
-    for (let g = 0; g < inp.length; g++) {
-      console.log(g, "G");
+//function arr(inp) {
+//  const newArr = [];
+//  for (let i = 0; i < inp.length; i++) {
+//    console.log(i, "I");
+//    let product = 1;
+//    for (let g = 0; g < inp.length; g++) {
+//      console.log(g, "G");
+//
+//      if (g !== i) {
+//        product *= inp[g];
+//      }
+//    }
+//    newArr.push(product);
+//    console.log(product);
+//  }
+//  console.log(newArr);
+//}
+//arr([1, 2, 3, 4]);
 
-      if (g !== i) {
-        product *= inp[g];
-      }
-    }
-    newArr.push(product);
-    console.log(product);
-  }
-  console.log(newArr);
-}
-
-arr([1, 2, 3, 4]);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Задачка на 1 балл
-/* 
+
+
+//Сложность алгоритма: **3 из 10**
+//Временная сложность: **O(n)**
+//Что делает этот алгоритм: **Подсчет гласных в строке**
 function words(inp) {
   let count = 0;
   const processing = inp.toLowerCase().split("");
@@ -134,7 +137,7 @@ function words(inp) {
 words("Hello World"); // 3
 words("JavaScript"); // 3
 words("aeiou"); // 5
- */
+ 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Задачка на 3 балла
 /* function nums(inp) {
