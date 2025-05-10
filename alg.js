@@ -68,7 +68,7 @@
 //  console.log(arr);
 //}
 //uniqueElements([4, 1, 3, 2, 2, 5, 1]);
- 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Сложность алгоритма: 5 из 10
@@ -112,35 +112,37 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 //Сложность алгоритма: **3 из 10**
 //Временная сложность: **O(n)**
 //Что делает этот алгоритм: **Подсчет гласных в строке**
-function words(inp) {
-  let count = 0;
-  const processing = inp.toLowerCase().split("");
+//function words(inp) {
+//  let count = 0;
+//  const processing = inp.toLowerCase().split("");
+//
+//  for (let i = 0; i < processing.length; i++) {
+//    if (
+//      processing[i] === "a" ||
+//      processing[i] === "e" ||
+//      processing[i] === "i" ||
+//      processing[i] === "o" ||
+//      processing[i] === "u"
+//    ) {
+//      count++;
+//    }
+//  }
+//  console.log(count);
+//}
+//
+//words("Hello World"); // 3
+//words("JavaScript"); // 3
+//words("aeiou"); // 5
 
-  for (let i = 0; i < processing.length; i++) {
-    if (
-      processing[i] === "a" ||
-      processing[i] === "e" ||
-      processing[i] === "i" ||
-      processing[i] === "o" ||
-      processing[i] === "u"
-    ) {
-      count++;
-    }
-  }
-  console.log(count);
-}
-
-words("Hello World"); // 3
-words("JavaScript"); // 3
-words("aeiou"); // 5
- 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Задачка на 3 балла
-/* function nums(inp) {
+
+//Сложность алгоритма: **6 из 10**
+//Временная сложность: **O(n²)**
+//Что делает этот алгоритм: **Поиск второго по величине уникального числа в массиве**
+function nums(inp) {
   const newArr = [];
 
   for (let i = 0; i < inp.length; i++) {
@@ -160,7 +162,6 @@ nums([1, 2, 4, 3, 5, 5]); // 4
 nums([10, 10, 9]); // 9
 nums([5]); // null
 nums([7, 7, 7, 7]); // null
- */
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
