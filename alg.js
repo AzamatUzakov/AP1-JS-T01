@@ -1,13 +1,21 @@
-function range(start, end) {
-  let arr = [];
-  for (start = start; start < end + 1; start++) {
-    arr.push(start);
-  }
-  console.log(arr);
-}
+//  1 нахождение диапозона между start end,  O(n)
+//  Задачка на 2 балла
+//function range(start, end) {
+//  let arr = [];
+//  for (start = start; start < end + 1; start++) {
+//    arr.push(start);
+//  }
+//  console.log(arr);
+//}
+//range(0, 5); /*
 
-range(0, 5); /*
-/* function include(input, output) {
+
+
+
+//Сложность алгоритма: 1 из 10
+//Временная сложность: O(1)
+//Что делает этот алгоритм: Поиск элемента в массиве (с ошибкой)
+ function include(input, output) {
   for (let i = 0; i < input.length; i++) {
     if (input[i] === output) {
       return console.log(true);
@@ -17,7 +25,10 @@ range(0, 5); /*
   }
 }
 include([10, 30, 30, 10], 12);
- */
+
+
+
+
 
 /* function countOccurrences(inp, output) {
   let count = 0;
@@ -31,7 +42,7 @@ include([10, 30, 30, 10], 12);
 
 countOccurrences([10, 3, 40, 10, 10, 3], 3);
  */
-
+/* 
 function uniqueElements(inp, out) {
   let count = 0;
   let arr = [];
@@ -54,7 +65,7 @@ function uniqueElements(inp, out) {
   console.log(arr);
 }
 uniqueElements([4, 1, 3, 2, 2, 5, 1]);
- */
+  */
 
 /* function uniqueNums(inp, target) {
   for (let i = 0; i < inp.length; i++) {
