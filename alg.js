@@ -185,43 +185,44 @@
 //Временная сложность: **O(n³)**
 //Что делает этот алгоритм: **Поиск всех уникальных троек чисел и пар чисел, сумма которых равна целевому значению**
 
-function nums(inp, target) {
+//function nums(inp, target) {
+//  for (let i = 0; i < inp.length; i++) {
+//    for (let g = i + 1; g < inp.length; g++) {
+//      for (let f = g + 1; f < inp.length; f++) {
+//        if (inp[i] + inp[g] === target) {
+//          console.log(inp[i], inp[g]);
+//        }
+//        if (inp[i] + inp[g] + inp[f] === target) {
+//          console.log(inp[i], inp[g], inp[f]);
+//        }
+//      }
+//    }
+//  }
+//}
+//nums([10, 1, 2, 7, 6, 5], 8);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Сложность алгоритма: **7 из 10**
+//Временная сложность: **O(n²)**
+//Что делает этот алгоритм: **Поиск дубликатов в массиве**
+
+function findDuplicates(inp) {
+  let arr = [];
+  let count = 0;
   for (let i = 0; i < inp.length; i++) {
     for (let g = i + 1; g < inp.length; g++) {
-      for (let f = g + 1; f < inp.length; f++) {
-        if (inp[i] + inp[g] === target) {
-          console.log(inp[i], inp[g]);
-        }
-        if (inp[i] + inp[g] + inp[f] === target) {
-          console.log(inp[i], inp[g], inp[f]);
+      if (inp[i] === inp[g]) {
+        count++;
+        if (!arr.includes(inp[i])) {
+          arr.push(inp[i]);
         }
       }
     }
   }
+  console.log(arr);
 }
-
-nums([10, 1, 2, 7, 6, 5], 8);
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Задача на 3 балла
-//function findDuplicates(inp) {
-//  let arr = [];
-//  let count = 0;
-//  for (let i = 0; i < inp.length; i++) {
-//    for (let g = i + 1; g < inp.length; g++) {
-//      if (inp[i] === inp[g]) {
-//        count++;
-//        if (!arr.includes(inp[i])) {
-//                  arr.push(inp[i]);
-//
-//        }
-//      }
-//
-//    }
-//  }
-//  console.log(arr);
-//}
-//findDuplicates([1, 2, 3, 2, 3, 3, 4, 5, 5]); // => 2, 5
-//findDuplicates([10, 20, 10, 30, 40, 30, 50]); // => 10, 30
-//findDuplicates([1, 2, 3, 4]); // => ничего не выводит
+findDuplicates([1, 2, 3, 2, 3, 3, 4, 5, 5]); // => 2, 5
+findDuplicates([10, 20, 10, 30, 40, 30, 50]); // => 10, 30
+findDuplicates([1, 2, 3, 4]); // => ничего не выводит
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
