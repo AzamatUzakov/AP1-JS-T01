@@ -168,20 +168,24 @@
 //Сложность алгоритма: **2 из 10**
 //Временная сложность: **O(n)**
 //Что делает этот алгоритм: **Вычисление среднего целого значения массива**
- function arrNums(inp) {
-  let result = inp.reduce((sum, item) => sum + item, 0);
-  let razdeleni = result / inp.length;
-  let orgRes= Math.floor(razdeleni);
-  console.log(orgRes);
-}
-
-arrNums([1, 2, 3, 4, 5]); // 3
-arrNums([10, 10, 10]); // 10
-arrNums([3, 5]); // 4
+// function arrNums(inp) {
+//  let result = inp.reduce((sum, item) => sum + item, 0);
+//  let razdeleni = result / inp.length;
+//  let orgRes= Math.floor(razdeleni);
+//  console.log(orgRes);
+//}
+//
+//arrNums([1, 2, 3, 4, 5]); // 3
+//arrNums([10, 10, 10]); // 10
+//arrNums([3, 5]); // 4
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Задачка на 5 баллов
-/* function nums(inp, target) {
+
+//Сложность алгоритма: **8 из 10**
+//Временная сложность: **O(n³)**
+//Что делает этот алгоритм: **Поиск всех уникальных троек чисел и пар чисел, сумма которых равна целевому значению**
+
+function nums(inp, target) {
   for (let i = 0; i < inp.length; i++) {
     for (let g = i + 1; g < inp.length; g++) {
       for (let f = g + 1; f < inp.length; f++) {
@@ -197,7 +201,6 @@ arrNums([3, 5]); // 4
 }
 
 nums([10, 1, 2, 7, 6, 5], 8);
- */
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Задача на 3 балла
