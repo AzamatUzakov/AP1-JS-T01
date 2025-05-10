@@ -22,3 +22,9 @@
 //  }
 //}
 //getNumbersIdBySum([0, 5, 2, 3, 4, 5, 7, 2, 4, 8, 4, 2, 7, 9], 16);
+
+let arr = [2, 46, 7, 3, 2, 5, 79];
+
+for (let [index, value] of arr.entries()) {
+  console.log(`Индекс: ${index}`);
+}
