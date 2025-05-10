@@ -46,31 +46,35 @@
 //Сложность алгоритма: 6 из 10
 //Временная сложность: O(n²)
 //Что делает этот алгоритм: Поиск уникальных элементов в массиве
-function uniqueElements(inp, out) {
-  let count = 0;
-  let arr = [];
-  for (let i = 0; i < inp.length; i++) {
-    count = 0;
-    for (let j = 0; j < inp.length; j++) {
-      if (inp[i] === inp[j]) {
-        count++;
-      }
-    }
-    if (count === 1) {
-      if (arr.includes(inp[i]) === false) {
-        arr.push(inp[i]);
-      }
-    }
-  }
-
-  console.log(count);
-
-  console.log(arr);
-}
-uniqueElements([4, 1, 3, 2, 2, 5, 1]);
+//function uniqueElements(inp, out) {
+//  let count = 0;
+//  let arr = [];
+//  for (let i = 0; i < inp.length; i++) {
+//    count = 0;
+//    for (let j = 0; j < inp.length; j++) {
+//      if (inp[i] === inp[j]) {
+//        count++;
+//      }
+//    }
+//    if (count === 1) {
+//      if (arr.includes(inp[i]) === false) {
+//        arr.push(inp[i]);
+//      }
+//    }
+//  }
+//
+//  console.log(count);
+//
+//  console.log(arr);
+//}
+//uniqueElements([4, 1, 3, 2, 2, 5, 1]);
  
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* function uniqueNums(inp, target) {
+
+//Сложность алгоритма: 5 из 10
+//Временная сложность: O(n²)
+//Что делает этот алгоритм: Поиск пары чисел, сумма которых равна целевому значению
+function uniqueNums(inp, target) {
   for (let i = 0; i < inp.length; i++) {
     for (let g = i + 1; g < inp.length; g++) {
       if (inp[i] + inp[g] === target) {
@@ -80,7 +84,7 @@ uniqueElements([4, 1, 3, 2, 2, 5, 1]);
   }
 }
 
-uniqueNums([1, 2, 3, 4, 5, 6], 7); */
+uniqueNums([1, 2, 3, 4, 5, 6], 7);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*  Задачка на 7 баллов
