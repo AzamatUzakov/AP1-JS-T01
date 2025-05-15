@@ -233,27 +233,65 @@
 //Временная сложность: O(n² · k log k)
 //Что делает этот алгоритм:
 //Находит и выводит пары строк из массива, которые являются анаграммами друг друга. Для этого каждая строка сортируется по буквам и сравнивается с остальными. Если отсортированные строки совпадают — они анаграммы.
-function anagrams(inp) {
-  for (let i = 0; i < inp.length; i++) {
-    let splitArrTop = inp[i].split("").sort().join("");
+//function anagrams(inp) {
+//  for (let i = 0; i < inp.length; i++) {
+//    let splitArrTop = inp[i].split("").sort().join("");
+//
+//    for (let g = i + 1; g < inp.length; g++) {
+//      let splitArr = inp[g].split("").sort().join("");
+//
+//      if (splitArrTop === splitArr) {
+//        console.log(inp[i], inp[g]);
+//      }
+//    }
+//  }
+//}
+//
+//anagrams([
+//  "listen",
+//  "silent",
+//  "enlist",
+//  "hello",
+//  "world",
+//  "ndkcmdk",
+//  "dlrow",
+//  "olleh",
+//]);
 
-    for (let g = i + 1; g < inp.length; g++) {
-      let splitArr = inp[g].split("").sort().join("");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      if (splitArrTop === splitArr) {
-        console.log(inp[i], inp[g]);
-      }
+//Сложность алгоритма: 4 из 10
+//Временная сложность: O(n)
+//Что делает этот алгоритм:
+//Определяет символы, которые встречаются в строке чаще всего. Игнорирует пробелы и регистр. Возвращает массив, содержащий наиболее частый(е) символ(ы) и их количество
+function mostFrequentChars(inp) {
+  let checkReplace = inp.replace(/\s/g, "").toLowerCase().split("");
+  let object = {};
+  let result = [];
+  let count = 0;
+  for (let i = 0; i < checkReplace.length; i++) {
+    if (object[checkReplace[i]] !== undefined) {
+      object[checkReplace[i]] += 1;
+    } else {
+      object[checkReplace[i]] = 1;
     }
   }
+
+  let filter = Object.values(object);
+  for (let val of filter) {
+    if (count < val) {
+      count = val;
+    }
+  }
+
+  for (let [key, value] of Object.entries(object)) {
+    if (value === count) {
+      result.push(key, value);
+    }
+  }
+  console.log(result);
 }
 
-anagrams([
-  "listen",
-  "silent",
-  "enlist",
-  "hello",
-  "world",
-  "ndkcmdk",
-  "dlrow",
-  "olleh",
-]);
+mostFrequentChars("hello world"); // ['l']
+//mostFrequentChars("abc abc abc"); // ['a', 'b', 'c']
+//mostFrequentChars("aabbccdd"); // ['a', 'b', 'c', 'd']
