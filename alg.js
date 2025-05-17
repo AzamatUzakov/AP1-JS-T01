@@ -293,5 +293,7 @@ function mostFrequentChars(inp) {
 }
 
 mostFrequentChars("hello world"); // ['l']
-//mostFrequentChars("abc abc abc"); // ['a', 'b', 'c']
-//mostFrequentChars("aabbccdd"); // ['a', 'b', 'c', 'd']
+mostFrequentChars("abc abc abc"); // ['a', 'b', 'c']
+mostFrequentChars("aabbccdd"); // ['a', 'b', 'c', 'd']
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
