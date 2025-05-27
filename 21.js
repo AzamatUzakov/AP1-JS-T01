@@ -8,7 +8,9 @@
 //  console.log(arr);
 //}
 //range(0, 5);
+
 //-------------------------------------------------------------------------//
+
 //Задание 2. Поиск двух чисел, составляющих сумму
 //function getNumbersIdBySum(arrayOfNumbers, sum) {
 //  for (let i = 0; i < arrayOfNumbers.length; i++) {
@@ -23,8 +25,18 @@
 //}
 //getNumbersIdBySum([0, 5, 2, 3, 4, 5, 7, 2, 4, 8, 4, 2, 7, 9], 16);
 
-let arr = [2, 46, 7, 3, 2, 5, 79];
+//-------------------------------------------------------------------------//
 
-for (let [index, value] of arr.entries()) {
-  console.log(`Индекс: ${index}`);
+//Задание 3. Нахождение НОД
+function getNOD(first, second) {
+  while (first % second !== 0) {
+    let a = first % second;
+    first = second;
+    second = a;
+
+    second % first;
+  }
+  console.log(second);
 }
+
+getNOD(1, 3);
