@@ -28,15 +28,35 @@
 //-------------------------------------------------------------------------//
 
 //Задание 3. Нахождение НОД
-function getNOD(first, second) {
-  while (first % second !== 0) {
-    let a = first % second;
-    first = second;
-    second = a;
+//function getNOD(first, second) {
+//  while (first % second !== 0) {
+//    let a = first % second;
+//    first = second;
+//    second = a;
+//
+//    second % first;
+//  }
+//  console.log(second);
+//}
+//
+//getNOD(1, 3);
 
-    second % first;
+//-------------------------------------------------------------------------//
+
+//Задание 4. Нахождение простых чисел
+
+function getSimpleNumbers(touple) {
+  let start_num = touple[0];
+  let end_num = touple.at(-1);
+
+  for (let i = start_num; i <= end_num; i++) {
+    //    console.log(i);
+    if (i / i === 0 && i / 1) {
+      //      console.log(i);
+    } else {
+      console.log(i);
+    }
   }
-  console.log(second);
 }
 
-getNOD(1, 3);
+getSimpleNumbers([2, 10]);
