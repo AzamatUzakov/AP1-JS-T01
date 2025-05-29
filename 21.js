@@ -28,18 +28,19 @@
 //-------------------------------------------------------------------------//
 
 //Задание 3. Нахождение НОД
-function getNOD(first, second) {
-  while (first % second !== 0) {
-    let a = first % second;
-    first = second;
-    second = a;
+//function getNOD(first, second) {
+//  while (first % second !== 0) {
+//    let a = first % second;
+//    first = second;
+//    second = a;
+//
+//    second % first;
+//  }
+//  console.log(second);
+//}
+//
+//getNOD(1, 3);
 
-    second % first;
-  }
-  console.log(second);
-}
-
-getNOD(1, 3)
 //-------------------------------------------------------------------------//
 
 //Задание 4. Нахождение простых чисел
