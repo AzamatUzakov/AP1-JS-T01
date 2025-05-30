@@ -45,18 +45,22 @@
 
 //Задание 4. Нахождение простых чисел
 
-/* function getSimpleNumbers(touple) {
+function getSimpleNumbers(touple) {
   let start_num = touple[0];
   let end_num = touple.at(-1);
-
+  let prostie_chisla = [];
   for (let i = start_num; i <= end_num; i++) {
-    //    console.log(i);
-    if (i / i === 0 && i / 1) {
-      //      console.log(i);
-    } else {
-      console.log(i);
+    console.log(i);
+
+    for (let g = i + 1; g <= end_num; g++) {
+      if (g % i === 0) {
+        console.log(i);
+      } else {
+        prostie_chisla.push(g);
+      }
     }
   }
+  console.log(prostie_chisla);
 }
 
-getSimpleNumbers([2, 10]); */
+getSimpleNumbers([2, 10]);
