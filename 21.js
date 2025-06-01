@@ -44,7 +44,7 @@
 //-------------------------------------------------------------------------//
 
 //Задание 4. Нахождение простых чисел
-/* 
+
 function getSimpleNumbers(touple) {
   let start_num = touple[0];
   let end_num = touple.at(-1);
@@ -64,4 +64,3 @@ function getSimpleNumbers(touple) {
 }
 
 getSimpleNumbers([2, 10]);
- */
