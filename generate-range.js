@@ -7,7 +7,7 @@ function range(start, end) {
   }
   console.log(arr);
 }
-range(0, 5);
+range(0, 10);
 
 //Время выполнения: O(n)
 //Сложность:  2/10
