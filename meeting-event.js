@@ -1,4 +1,4 @@
-/* const dayStart = "07:30"; // начало дня
+const dayStart = "07:30"; // начало дня
 const dayEnd = "17:45"; // конец дня;
 
 let [start_hours, start_min] = dayStart.split(":").map(Number); // разделяю строку через : и перевожу его в number;
@@ -12,4 +12,3 @@ function scheduleMeeting(startTime, durationMinutes) {
 }
 
 scheduleMeeting("07:30", 15);
- */
