@@ -1,4 +1,4 @@
-/* //Задание 8. Сортировка слиянием
+//Задание 8. Сортировка слиянием
 function mergeSort(arrayOfNumbers) {
 
     if (arrayOfNumbers.length <= 1) return arrayOfNumbers
@@ -16,4 +16,4 @@ function merge(leftSlice, rightSlice) {
     
 }
 
-mergeSort([38, 27, 43, 3, 9, 82]) */
+mergeSort([38, 27, 43, 3, 9, 82])
