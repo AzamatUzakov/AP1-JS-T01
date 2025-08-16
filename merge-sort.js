@@ -2,18 +2,28 @@
 function mergeSort(arrayOfNumbers) {
 
     if (arrayOfNumbers.length <= 1) return arrayOfNumbers
-    let midle = arrayOfNumbers.length / 2
-    let leftSlice = mergeSort(arrayOfNumbers.slice(0, midle))
-    let rightSlice = mergeSort(arrayOfNumbers.slice(midle))
+    let leftArr = arrayOfNumbers.slice(0, arrayOfNumbers.length / 2)//Разделяю масссив на половину
+    let rightArr = arrayOfNumbers.slice(arrayOfNumbers.length / 2)//Разделяю масссив на половину
 
-    console.log(leftSlice);
-    console.log(rightSlice);
-    return merge(leftSlice, rightSlice)
 
+    let leftSorted = mergeSort(leftArr)//тут происходит рекурсия
+    let rigthSorted = mergeSort(rightArr)//тут происходит рекурсия
+
+    function merge(leftSorted, rigthSorted) {//function для слияния
+        let resultArr = []//для результат
+        while (leftSorted.length && rigthSorted.length) {//Пока оба массива не пустые, цикл будет выполняться.
+            if (leftSorted[0] < rigthSorted[0]) { //Если первый элемент leftSorted меньше, чем первый элемент rigthSorted, то:
+                resultArr.push(leftSorted.shift())//удаляет первый элемент из leftSorted и возвращает его.
+            } else {
+                resultArr.push(rigthSorted.shift())
+            }
+        }
+        return resultArr.concat(leftSorted, rigthSorted)//добавление оставшихся элементов
+    }
+    return merge(leftSorted, rigthSorted)
 }
-function merge(leftSlice, rightSlice) {
-    let arr = []
-    
-}
 
-mergeSort([38, 27, 43, 3, 9, 82])
+console.log((mergeSort([38, 27, 43, 3, 9, 82])));
+//Время выполнения: O(n log n)
+//Сложность: 7 / 10
+//Описание: Сортировка слиянием: рекурсивно делит массив пополам, сортирует каждую половину и объединяет их в один отсортированный массив.
